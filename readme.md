@@ -1,4 +1,5 @@
 # DevGeekWeek 2024 - Node.js & React
+https://youtu.be/YojASoe8z1Y
 
 1. introduction
 2. schedule
