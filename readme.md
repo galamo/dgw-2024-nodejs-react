@@ -220,3 +220,34 @@ app.listen(3333);
 2. navigate to api folder
 3. Run `npm install`
 4. Run `npm run dev`
+
+
+
+```typescript
+interface IUser {
+    user: string
+}
+
+type Product = {
+    name: string,
+    price: number,
+    category: CATEGORIES
+}
+
+enum CATEGORIES {
+    MEAT = 1,
+    DAIRY = 2,
+    DRINKS = 3
+}
+
+const p1: Product = { name: "coffee", price: 10, category: CATEGORIES.DRINKS }
+const p2: Product = { name: "coffee", price: 10, category: CATEGORIES.DRINKS }
+console.log(p2)
+
+
+function getUser(): IUser {
+    return { user: "galamouyal88@gmail.com" }
+}
+
+
+```
