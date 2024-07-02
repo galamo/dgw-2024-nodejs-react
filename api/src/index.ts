@@ -3,9 +3,10 @@ import { authenticate } from "./middleware/authenticate"
 import { requestStarted } from "./middleware/requestStarted"
 import { requestId } from "./middleware/requestId"
 import { router } from "./hostages/"
-
+import cors from "cors"
 const app = express()
 
+app.use(cors())
 app.use(requestId)
 app.use(requestStarted)
 app.use(authenticate)

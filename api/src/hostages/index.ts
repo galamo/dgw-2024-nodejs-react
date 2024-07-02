@@ -1,7 +1,7 @@
 import express from "express"
 const bringThemHomeNow = require("bring-them-home-now")
 import { z } from "zod";
-const hostageNameSchema = z.string().min(3).max(10)
+const hostageNameSchema = z.string().min(0).max(10)
 
 
 
