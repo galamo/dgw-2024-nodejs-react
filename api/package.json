@@ -1,0 +1,17 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "api for dev geek week 2024",
+  "main": "index.js",
+  "scripts": {
+    "doSomething": "echo Test",
+    "start": "echo start",
+    "compile": "tsc  --watch",
+    "tsc-init": "tsc --init"
+  },
+  "author": "gal amouyal",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^5.5.3"
+  }
+}
