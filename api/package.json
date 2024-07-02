@@ -5,13 +5,15 @@
   "main": "index.js",
   "scripts": {
     "doSomething": "echo Test",
-    "start": "echo start",
+    "start": "node --watch ./dist/index.js ",
     "compile": "tsc  --watch",
     "tsc-init": "tsc --init"
   },
   "author": "gal amouyal",
   "license": "ISC",
   "dependencies": {
+    "@types/express": "^4.17.21",
+    "express": "^4.19.2",
     "typescript": "^5.5.3"
   }
 }
