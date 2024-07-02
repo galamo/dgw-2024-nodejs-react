@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, Profiler } from "react";
 import MyHeader, { Colors } from "../../header";
 import { SingleHostage, getHostagesApi } from "./service";
 import { HostageCard } from "./hostageCard";
@@ -30,12 +30,19 @@ export default function Hostages() {
     }, [searchInput])
 
     return <div>
+        {searchInput}
         <MyHeader text="Hostages" color={Colors.Yellow} />
         <input type="text" value={searchInput} onChange={(e) => {
             setSearchInput(e.target.value)
         }} />
         <SpinnerWrapper isLoading={isLoading}>
-            <HostagesList hostages={hostages} />
+            <Profiler id="HostagesList" onRender={(a, b, c, d, e, f) => {
+                console.log(a, b, c, d, e, f)
+            }}>
+                {searchInput.length > 3 ? <HostagesList hostages={hostages} /> : null}
+            </Profiler>
+
+
         </SpinnerWrapper>
 
     </div>
