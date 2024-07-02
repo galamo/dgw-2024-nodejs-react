@@ -1,8 +1,10 @@
 import express, { Request, Response } from "express"
 import { authenticate } from "./middleware/authenticate"
 import { requestStarted } from "./middleware/requestStarted"
+import { requestId } from "./middleware/requestId"
 const app = express()
 
+app.use(requestId)
 app.use(requestStarted)
 app.use(authenticate)
 

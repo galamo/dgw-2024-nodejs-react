@@ -6,7 +6,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const authenticate_1 = require("./middleware/authenticate");
 const requestStarted_1 = require("./middleware/requestStarted");
+const requestId_1 = require("./middleware/requestId");
 const app = (0, express_1.default)();
+app.use(requestId_1.requestId);
 app.use(requestStarted_1.requestStarted);
 app.use(authenticate_1.authenticate);
 app.get("/health-check", (req, res, next) => {
